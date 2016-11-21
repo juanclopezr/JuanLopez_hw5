@@ -4,6 +4,6 @@ import numpy as np
 
 data = np.loadtxt('sismo.dat')
 
-corner.corner(data,labels=[r"$x$", r"$y$"],show_titles=True)
+corner.corner(data[20000:,:],labels=[r"$x$", r"$y$"],show_titles=True)
 plt.savefig('graph.pdf',format='pdf',transparent=True)
 plt.close()
