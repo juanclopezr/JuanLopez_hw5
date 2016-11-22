@@ -26,8 +26,8 @@ int main()
       r[j] = log10(r[j]*149597870700);
       v[j] = log10(v[j]*149597870700/(365.25*24*3600));
     }
-  float deltaM = 0.5;
-  float deltak = 0.005;
+  float deltaM = 1;
+  float deltak = 0.5;
   float UM;
   float Uk;
   float M_new;
@@ -70,7 +70,7 @@ int main()
     }
   for(j=0;j<N;j++)
     {
-      printf("%f %f\n",M[j],k[j]);
+      printf("%f %f\n",M[j],k[j]*2+1);
     }
   return 0;
 }
