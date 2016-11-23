@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
-#define N 40000
+#define N 120000
 
 float *theorical(float alpha,float beta,float gamma,float delta,float x0,float y0,float h);
 float like(float alpha, float beta,float gamma,float delta,float x0,float y0,float ti[96],float x[96],float y[96]);
@@ -84,6 +84,10 @@ int main()
 	  Gamma[j] = Gamma[j-1];
 	  Delta[j] = Delta[j-1];
 	}
+    }
+  for(j=1;j<N;j++)
+    {
+      printf("%f %f %f %f\n",Alpha[j],Beta[j],Gamma[j],Delta[j]);
     }
   return 0;
 }
